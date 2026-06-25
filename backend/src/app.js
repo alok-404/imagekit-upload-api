@@ -7,14 +7,12 @@ connectToDB();
 
 const app = express();
 app.use(cors({
-    origin:"https://imagekit-upload-api-eight.vercel.app/",
+    origin:"https://imagekit-upload-api-eight.vercel.app",
     credentials: true
 }));
 app.use(express.json());
 
-app.use("/",imageRoutes);
-
-
+app.use("/",imageRoutes); //slash API with imageRoute
 
 
 
