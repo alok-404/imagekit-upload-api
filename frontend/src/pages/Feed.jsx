@@ -16,8 +16,10 @@ const Feed = () => {
       try {
 
         setError(null); 
+
+        const API = "https://imagekit-upload-api.onrender.com"
    
-        const res = await axios.get("http://localhost:3000/posts");
+        const res = await axios.get(`${API}/posts`);
         
         setPosts(res.data.getPost || []); 
         toast.success("Welcome to Feed Page");

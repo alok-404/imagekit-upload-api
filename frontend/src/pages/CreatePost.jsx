@@ -15,7 +15,9 @@ const CreatePost = () => {
     const formData = new FormData(e.target);
 
     try {
-      const res = await axios.post("http://localhost:3000/upload", formData, {
+
+        const API = "https://imagekit-upload-api.onrender.com" 
+      const res = await axios.post(`${API}/upload`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
